@@ -27,7 +27,6 @@ class LinkedList {
             head = head.next;
             return;
         }
-
         Node current = head;
         Node prev = null;
 
@@ -36,8 +35,6 @@ class LinkedList {
             current = current.next;
         }
         if (current == null) return;
-
-        // Remove current node
         prev.next = current.next;
     }
     public void display() {
@@ -49,25 +46,21 @@ class LinkedList {
         System.out.println("null");
     }
 }
-
 public class Main {
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-
         list.insert(10);
         list.insert(20);
         list.insert(30);
         list.insert(40);
-
         System.out.print("Initial list: ");
         list.display();
-
         list.delete(20);
         System.out.print("After deleting 20: ");
         list.display();
-
         list.delete(10);
         System.out.print("After deleting 10: ");
         list.display();
     }
 }
+
